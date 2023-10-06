@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact index{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Contacts</h1>
+
+    <table class="table" id="contacts-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>ContactNumber</th>
+                <th>Address</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.contactNumber }}</td>
+                <td>{{ contact.address }}</td>
+                <td>
+                    <a href="{{ path('app_contact_show', {'id': contact.id}) }}">show</a>
+                    <a href="{{ path('app_contact_edit', {'id': contact.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_contact_new') }}">Create new</a>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            $('#contacts-table').DataTable();
+        });
+    </script>
+
+{% endblock %}
