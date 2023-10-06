@@ -23,7 +23,7 @@ class DefaultController extends AbstractController
     {
         if ($this->security->isGranted('IS_AUTHENTICATED_FULLY')) {
             // The user is logged in, handle accordingly
-            return $this->redirectToRoute('dashboard'); // Redirect to a dashboard or other authenticated route
+            return $this->redirectToRoute('app_contact_index'); // Redirect to a dashboard or other authenticated route
         }
         elseif($this->security->isGranted('IS_AUTHENTICATED_ANONYMOUSLY')) {
             return $this->redirectToRoute('login');
