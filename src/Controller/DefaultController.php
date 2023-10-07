@@ -29,6 +29,7 @@ class DefaultController extends AbstractController
             return $this->redirectToRoute('login');
         }
 
+        // should not come here
         return $this->render('index/index.html.twig', [
             'controller_name' => 'IndexController',
             'isLoggedIn' => $this->security->isGranted('IS_AUTHENTICATED_REMEMBERED'),
