@@ -32,7 +32,7 @@ class ContactControllerTest extends WebTestCase
     public function testShow()
     {
         $client = static::createClient();
-        $client->request('GET', '/contact/5'); // Replace 1 with a valid contact ID
+        $client->request('GET', '/contact/6'); // Replace 1 with a valid contact ID
         
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('h1', 'Contact Details');
@@ -41,7 +41,7 @@ class ContactControllerTest extends WebTestCase
     public function testEdit()
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/contact/5/edit'); // Replace 1 with a valid contact ID
+        $crawler = $client->request('GET', '/contact/6/edit'); // Replace 1 with a valid contact ID
         
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('h1', 'Edit Contact');
@@ -52,7 +52,7 @@ class ContactControllerTest extends WebTestCase
     public function testDelete()
     {
         $client = static::createClient();
-        $client->request('POST', '/contact/5/delete', ['_token' => 'your_csrf_token']); // Replace 1 and 'your_csrf_token' accordingly
+        $client->request('POST', '/contact/6/delete', ['_token' => 'your_csrf_token']); // Replace 1 and 'your_csrf_token' accordingly
         
         $this->assertResponseRedirects('/contact/');
     }
