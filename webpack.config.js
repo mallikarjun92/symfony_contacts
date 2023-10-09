@@ -21,9 +21,25 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    .addEntry('sb-admin-css', './assets/css/sb-admin-2.css')
-    .addEntry('sb-admin-js', './assets/js/sb-admin-2.min.js')
-    //.addEntry('sb-admin-css', './assets/css/sb-admin-2.min.css')
+    
+    .addEntry('font-awesome', './assets/sb-admin-2/vendor/fontawesome-free/css/all.min.css')
+    
+    .addEntry('jquery-min-js', './assets/sb-admin-2/vendor/jquery/jquery.min.js')
+    .addEntry('bootstrap-bundle-min-js', './assets/sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    
+    .addEntry('jquery-easing-js', './assets/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js')
+    
+    .addEntry('sb-admin-css', './assets/sb-admin-2/css/sb-admin-2.min.css')
+    .addEntry('sb-admin-js', './assets/sb-admin-2/js/sb-admin-2.min.js')
+    .addEntry('jquery-datatable-min-js', './assets/sb-admin-2/vendor/datatables/jquery.dataTables.min.js')
+    .addEntry('datatable-bootstrap4-min-js', './assets/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js')
+    
+    .addEntry('datatable-bootstrap4-min-css', './assets/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css')
+    
+    //.addEntry('jquery', 'jquery')
+    
+    //.addStyleEntry('font-awesome', './assets/sb-admin-2/vendor/fontawesome-free/css/all.css')
+    
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
@@ -59,7 +75,7 @@ Encore
     //})
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -72,7 +88,7 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    .autoProvidejQuery()
+    //.autoProvidejQuery()
 ;
 
 module.exports = Encore.getWebpackConfig();

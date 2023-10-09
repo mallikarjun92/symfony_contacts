@@ -7,15 +7,29 @@
            and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
+            
+            {{ encore_entry_link_tags('font-awesome') }}
             {{ encore_entry_link_tags('sb-admin-css') }}
+            {{ encore_entry_link_tags('datatable-bootstrap4-min-css') }}
+            
         {% endblock %}
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('font-awesome') }}
+            
+            {{ encore_entry_script_tags('jquery-min-js') }}
+            {{ encore_entry_script_tags('bootstrap-bundle-min-js') }}
+            
+            {{ encore_entry_script_tags('jquery-easing-js') }}
+            
             {{ encore_entry_script_tags('sb-admin-js') }}
+            
+            {{ encore_entry_script_tags('jquery-datatable-min-js') }}
+            {{ encore_entry_script_tags('datatable-bootstrap4-min-js') }}
         {% endblock %}
     </head>
-    <body class="{% block body_class %}{% endblock %}">
+    <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
         {% block body %}{% endblock %}
     </body>
 </html>
