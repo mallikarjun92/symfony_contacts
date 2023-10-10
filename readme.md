@@ -8,6 +8,7 @@ A symfony webapp to manage contacts
 
 
 ******** CLONE PROJECT
+
 ```bash
 git clone https://github.com/mallikarjun92/symfony_contacts.git
 cd symfony_contacts
@@ -36,9 +37,12 @@ symfony local:server:start -d
 
 ******* Run Doctrine Migration
 
+run command
 ```bash
 php bin/console doctrine:migrations:migrate
 ```
 
 Open https://127.0.0.1:8000/ in the browser
+
+
 
