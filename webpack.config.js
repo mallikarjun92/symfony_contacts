@@ -20,27 +20,23 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('app', './assets/app.js')
-    
-    .addEntry('font-awesome', './assets/sb-admin-2/vendor/fontawesome-free/css/all.min.css')
-    
-    .addEntry('jquery-min-js', './assets/sb-admin-2/vendor/jquery/jquery.min.js')
-    .addEntry('bootstrap-bundle-min-js', './assets/sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js')
-    
-    .addEntry('jquery-easing-js', './assets/sb-admin-2/vendor/jquery-easing/jquery.easing.min.js')
-    
-    .addEntry('sb-admin-css', './assets/sb-admin-2/css/sb-admin-2.min.css')
-    .addEntry('sb-admin-js', './assets/sb-admin-2/js/sb-admin-2.min.js')
-    .addEntry('jquery-datatable-min-js', './assets/sb-admin-2/vendor/datatables/jquery.dataTables.min.js')
-    .addEntry('datatable-bootstrap4-min-js', './assets/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js')
-    
-    .addEntry('datatable-bootstrap4-min-css', './assets/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css')
-    
-    //.addEntry('jquery', 'jquery')
-    
-    //.addStyleEntry('font-awesome', './assets/sb-admin-2/vendor/fontawesome-free/css/all.css')
-    
 
+    .addEntry('app', './assets/app.js')
+
+    .addEntry('font-awesome', './node_modules/startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.min.css')
+    
+    .addEntry('jquery-min-js', './node_modules/startbootstrap-sb-admin-2/vendor/jquery/jquery.min.js')
+    .addEntry('bootstrap-bundle-min-js', './node_modules/startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    
+    .addEntry('jquery-easing-js', './node_modules/startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.min.js')
+    
+    .addEntry('sb-admin-css', './node_modules/startbootstrap-sb-admin-2/css/sb-admin-2.min.css')
+    .addEntry('sb-admin-js', './node_modules/startbootstrap-sb-admin-2/js/sb-admin-2.min.js')
+    .addEntry('jquery-datatable-min-js', './node_modules/startbootstrap-sb-admin-2/vendor/datatables/jquery.dataTables.min.js')
+    .addEntry('datatable-bootstrap4-min-js', './node_modules/startbootstrap-sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js')
+    
+    .addEntry('datatable-bootstrap4-min-css', './node_modules/startbootstrap-sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css')
+    
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
 
