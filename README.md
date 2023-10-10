@@ -9,9 +9,10 @@ A symfony webapp to manage contacts
 
 ******** CLONE PROJECT
 
+```bash
 git clone https://github.com/mallikarjun92/symfony_contacts.git
 cd symfony_contacts
-
+```
 
 ******** Install Dependencies
 
