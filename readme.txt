@@ -6,13 +6,13 @@ Symfony CLI
 PHP 7.4 or higher
 
 ******** CLONE PROJECT
-<code>git clone https://github.com/mallikarjun92/symfony_contacts.git
-cd symfony_contacts</code>
+git clone https://github.com/mallikarjun92/symfony_contacts.git
+cd symfony_contacts
 
 ******** Install Dependencies
-<code>composer install
+composer install
 npm install
-npm run dev</code>
+npm run dev
 
 ******** Run local server using Symfony CLI
 To run local server using symfony download & install Symfony CLI from https://symfony.com/download
