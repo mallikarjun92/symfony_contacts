@@ -1,6 +1,9 @@
 # symfony_contacts
 A symfony webapp to manage contacts
 
+**** Requirements
+Symfony CLI
+PHP 7.4 or higher
 
 ******** CLONE PROJECT
 git clone https://github.com/mallikarjun92/symfony_contacts.git
