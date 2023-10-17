@@ -22,7 +22,11 @@ import './bootstrap';
 
 
 $(document).ready(function() {
-    $('[data-toggle="popover"]').popover();
+    //$('[data-toggle="popover"]').popover();
     $('#contacts-table').DataTable();
-    $('select[name="dataTable_length"]').addClass("custom-select custom-select-sm form-control form-control-sm");
+    //$('select[name="dataTable_length"]').addClass("custom-select custom-select-sm form-control form-control-sm");
+    $('select[name="dataTable_length"]').addClass("custom-select");
+    $('select[name="dataTable_length"]').addClass("custom-select-sm");
+    $('select[name="dataTable_length"]').addClass("form-control");
+    $('select[name="dataTable_length"]').addClass("form-control-sm");
 });
