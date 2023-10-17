@@ -12,6 +12,11 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Validator\Constraints\Email;
+use Symfony\Component\Validator\Constraints\Regex;
+use Symfony\Component\Validator\Constraints\Unique;
 
 class RegistrationFormType extends AbstractType
 {
@@ -19,6 +24,21 @@ class RegistrationFormType extends AbstractType
     {
         $builder
         ->add('username')
+        ->add('email', EmailType::class, [
+            'constraints' => [
+                new NotBlank(['message' => 'Please enter an email address.']),
+                new Email(['message' => 'Please enter a valid email address.']),
+            ],
+        ])
+        ->add('phoneNumber', TextType::class, [
+            'constraints' => [
+                new NotBlank(['message' => 'Please enter a phone number.']),
+                new Regex([
+                    'pattern' => '/^[0-9]{10}$/',
+                    'message' => 'Please enter a valid 10-digit phone number.',
+                ]),
+            ],
+        ])
         ->add('agreeTerms', CheckboxType::class, [
             'mapped' => false,
             'constraints' => [

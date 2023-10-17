@@ -1,0 +1,4 @@
+<div>
+    <h1>{{ subject }}</h1>
+    <p>Confirm your email using the link: <a href="{{ url('app_email_confirm', {user: user.id, confirmToken: user.confirmToken}) }}">{{ url('app_email_confirm', {user: user.id, confirmToken: user.confirmToken}) }}</a></p>
+</div>

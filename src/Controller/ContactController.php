@@ -36,6 +36,9 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $contactRepository->add($contact);
+
+            $this->addFlash('success', 'Contact created successfully.');
+
             return $this->redirectToRoute('app_contact_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -65,6 +68,9 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $contactRepository->add($contact);
+            
+            $this->addFlash('success', 'Contact updated successfully.');
+
             return $this->redirectToRoute('app_contact_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -81,6 +87,7 @@ class ContactController extends AbstractController
     {
         if ($this->isCsrfTokenValid('delete'.$contact->getId(), $request->request->get('_token'))) {
             $contactRepository->remove($contact);
+            $this->addFlash('success', 'Contact deleted successfully.');
         }
 
         return $this->redirectToRoute('app_contact_index', [], Response::HTTP_SEE_OTHER);
