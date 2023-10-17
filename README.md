@@ -19,6 +19,12 @@ cd symfony_contacts
 ```bash
 composer install
 npm install
+```
+
+******* Copy the sb-admin-2 files to ./assets folder and run dev script
+
+```bash
+xcopy /E /I ./node_modules/startbootstrap-sb-admin-2/ ./assets/sb-admin-2/
 npm run dev
 ```
 
