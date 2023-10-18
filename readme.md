@@ -24,7 +24,7 @@ npm install
 ******* Copy the ./node_modules/startbootstrap-sb-admin-2/ files to ./assets/sb-admin-2/ folder and run dev script
 
 ```bash
-xcopy /E /I ./node_modules/startbootstrap-sb-admin-2/ ./assets/sb-admin-2/
+xcopy /s /Y ".\node_modules\startbootstrap-sb-admin-2\*" ".\assets\sb-admin-2\"
 npm run dev
 ```
 
