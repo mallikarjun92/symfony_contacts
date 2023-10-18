@@ -21,7 +21,7 @@ composer install
 npm install
 ```
 
-******* Copy the sb-admin-2 files to ./assets folder and run dev script
+******* Copy the ./node_modules/startbootstrap-sb-admin-2/ files to ./assets/sb-admin-2/ folder and run dev script
 
 ```bash
 xcopy /E /I ./node_modules/startbootstrap-sb-admin-2/ ./assets/sb-admin-2/
