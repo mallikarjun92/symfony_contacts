@@ -3,7 +3,7 @@ A symfony webapp to manage contacts
 
 **** Requirements
 
-* Symfony CLI  (To run local server using symfony download & install Symfony CLI from https://symfony.com/download)
+* Symfony CLI  (download & install Symfony CLI from https://symfony.com/download)
 * PHP 7.4 or higher
 
 
